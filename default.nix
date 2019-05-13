@@ -1,21 +1,13 @@
-{ stdenv, lib, cargo, rustc, ... }:
+{ rustPlatform, lib, ... }:
 
-stdenv.mkDerivation {
+rustPlatform.buildRustPackage {
   pname = "kbd_backlight-fiddler";
   version = "0.0.1";
 
   src = lib.cleanSource ./.;
 
-  buildInputs = [
-    cargo
-  ];
+  cargoSha256 = "0jacm96l1gw9nxwavqi1x4669cg6lzy9hr18zjpwlcyb3qkw9z7f";
 
-  buildPhase = ''
-    cargo build --release
-  '';
-
-  installPhase = ''
-    mkdir -p $out/bin
-    cp target/release/kbd_backlight-fiddler $out/bin/
-  '';
+  meta = with lib; {
+  };
 }
