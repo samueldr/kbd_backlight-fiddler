@@ -20,3 +20,16 @@ More details
 
 It should be built, and called with the appropriate rights to fiddle with the
 files in `/sys`.
+
+Usage
+-----
+
+```
+ $ kbd_backlight-fiddler <number>
+```
+
+The number may be dependent on the driver, the maximum might be 100, or greated.
+
+Giving a number of `-1` should print the range.
+
+A better CLI with options and diagnostics is planned.
