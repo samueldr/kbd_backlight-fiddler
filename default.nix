@@ -2,11 +2,11 @@
 
 rustPlatform.buildRustPackage {
   pname = "kbd_backlight-fiddler";
-  version = "0.0.1";
+  version = "0.2.0";
 
   src = lib.cleanSource ./.;
 
-  cargoSha256 = "0jacm96l1gw9nxwavqi1x4669cg6lzy9hr18zjpwlcyb3qkw9z7f";
+  cargoSha256 = "1s57iy3bp3d88r5bwz73j2g4izm7gqk1wzr9239zxf927gk942f7";
 
   meta = with lib; {
   };
